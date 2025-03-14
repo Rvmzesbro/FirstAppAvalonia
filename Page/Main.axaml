@@ -1,0 +1,48 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="FirstAppAvalonia.Main">
+
+  <UserControl.Styles>
+    <StyleInclude Source="/MainWindowStyle.axaml"></StyleInclude>
+  </UserControl.Styles>
+
+  <Grid RowDefinitions="Auto, *, Auto" Classes="MainGrid">
+    <ScrollViewer>
+      <StackPanel Grid.Row="0" Orientation="Horizontal">
+        <TextBlock x:Name="Mimo" Classes="Mimo" Text="Mimo"></TextBlock>
+      </StackPanel>
+    </ScrollViewer>
+
+    <Grid Grid.Row="1" ColumnDefinitions="*, 2*" Classes="RegistrationGrid">
+      <ScrollViewer>
+        <StackPanel Grid.Column="0" VerticalAlignment="Top" Classes="FormRegistration">
+          <TextBlock x:Name="Registration" Classes="Registration">
+            Learn to code. <LineBreak></LineBreak>Build a portfolio.<LineBreak></LineBreak>
+            Get hired.
+          </TextBlock>
+          <TextBox x:Name="Email" Classes="Email" Text="Enter your email" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus_1"></TextBox>
+          <TextBox x:Name="Password" Text="Enter your password" GotFocus="TextBox_GotFocus_1" LostFocus="TextBox_LostFocus_2" Classes="Password"></TextBox>
+          <CheckBox x:Name="Agree" Classes="Agree">
+            <TextBlock Classes="AgreeCheck" Text="I agree to Mimo's Terms of Service."></TextBlock>
+          </CheckBox>
+          <Button x:Name="SignUp" Click="Button_Click" Classes="SignUp">
+            <TextBlock x:Name="ButtonSignUp" Classes="ButtonSignUp" Text="Sign up and learn for free"></TextBlock>
+          </Button>
+          <Button x:Name="SignGoogle" Click="Button_Click_3" Classes="ButtonRegistration">
+            <TextBlock x:Name="TextBlockRegistration" Classes="TextBlockRegistration" Text="Registration"></TextBlock>
+          </Button>
+        </StackPanel>
+      </ScrollViewer>
+
+      <!--<StackPanel Grid.Column="1" Classes="AttractiveContent">
+        <Image Width="450" Height="450" x:Name="Photo" Source="C:\Users\мой\Desktop\Avalonia\FirstAppAvalonia\FirstAppAvalonia\FirstAppAvalonia\Photo.png"></Image>
+      </StackPanel>-->
+    </Grid>
+    <StackPanel Grid.Row="2">
+      <TextBlock x:Name="StatusBar" Classes="StatusBar"></TextBlock>
+    </StackPanel>
+  </Grid>
+</UserControl>

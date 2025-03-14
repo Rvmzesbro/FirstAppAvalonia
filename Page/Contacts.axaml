@@ -1,0 +1,35 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:page="using:FirstAppAvalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="FirstAppAvalonia.Contacts"
+             x:DataType="page:Contacts">
+
+    <UserControl.Styles>
+        <StyleInclude Source="/ContactsWindowStyle.axaml"></StyleInclude>
+    </UserControl.Styles>
+    
+    <Grid RowDefinitions="Auto * Auto" Classes="MainGrid">
+        <StackPanel>
+            <Button Grid.Row="0" Classes="BackRegistrationButton" HorizontalAlignment="Left" Click="Button_Click">
+        
+            </Button>
+            <TextBlock Grid.Row="0" x:Name="RegistrationTextBlock" Classes="RegistrationTextBlock" Text="Registration"></TextBlock>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1">
+            <TextBox x:Name="Email" Classes="Email" Text="Enter your email" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus_1"></TextBox>
+            <TextBox x:Name="Password" Text="Enter your password" Classes="Password" GotFocus="TextBox_GotFocus_1" LostFocus="TextBox_LostFocus_2"></TextBox>
+            <!-- <TextBox x:Name="Email" Classes="Email" Text="{Binding ContextUser.Email}" GotFocus="TextBox_GotFocus" LostFocus="TextBox_LostFocus_1"></TextBox> -->
+            <!-- <TextBox x:Name="Password" Text="{Binding ContextUser.Password}" Classes="Password" GotFocus="TextBox_GotFocus_1" LostFocus="TextBox_LostFocus_2"></TextBox> -->
+            <Button x:Name="Save" Classes="Save" Click="Button_Click_3">
+                <TextBlock Classes="SaveBlock" Text="Save"></TextBlock>
+            </Button>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+            <TextBlock x:Name="StatusBar"></TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>
