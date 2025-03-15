@@ -15,7 +15,7 @@
             <TextBlock Text="Authorized user"></TextBlock>
         </StackPanel>
         <StackPanel Grid.Row="1">
-            
+            <Button></Button>
         </StackPanel>
     </Grid>
 </UserControl>
