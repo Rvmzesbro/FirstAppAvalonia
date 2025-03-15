@@ -3,19 +3,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="FirstAppAvalonia.Page.Authorized">
+             x:Class="FirstAppAvalonia.Page.Authorized"
+                xmlns:page="clr-namespace:FirstAppAvalonia;assembly=FirstAppAvalonia"
+                x:DataType="page:Contacts">
     
     <UserControl.Styles>
         <StyleInclude Source="../AuthorizedWindowStyle.axaml"></StyleInclude>
     </UserControl.Styles>
     
     
-    <Grid RowDefinitions="Auto * Auto" Classes="MainGrid">
-        <StackPanel Grid.Row="0">
-            <TextBlock Text="Authorized user"></TextBlock>
-        </StackPanel>
-        <StackPanel Grid.Row="1">
-            <Button></Button>
-        </StackPanel>
+    <Grid Classes="MainGrid">
+        <!-- <StackPanel Grid.Row="0"> -->
+        <!--     <TextBlock Text="Authorized user"></TextBlock> -->
+        <!-- </StackPanel> -->
+        <!-- <StackPanel Grid.Row="1"> -->
+        <!--      -->
+        <!-- </StackPanel> -->
+        
+        <ListBox ItemsSource="{Binding Users}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="Auto, *">
+                        <StackPanel Grid.Row="0">
+                            <TextBlock Text="Email"></TextBlock>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1">
+                            <TextBlock Text="{Binding Email}"></TextBlock>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        
     </Grid>
 </UserControl>
