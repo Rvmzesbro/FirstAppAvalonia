@@ -1,15 +1,19 @@
+using System.Linq;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 using FirstAppAvalonia.Models;
+using FirstAppAvalonia.Page;
 
 namespace FirstAppAvalonia;
 
 public partial class Main : UserControl
 {
+    public User ContextUser { get; set; }
     public Main()
     {
         InitializeComponent();
+        ContextUser = new User();
     }
     private void Clear()
     {
@@ -22,16 +26,32 @@ public partial class Main : UserControl
     {
         var email = Email.Text;
         var password = Password.Text;
-
+        
         if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || Agree.IsChecked == false || !email.Contains('@') || !email.Contains('.'))
         {
             StatusBar.Text = "All fields must be filled in.";
             return;
         }
+        else
+        {
+            using (var db = new PostgresContext())
+            {
+                ContextUser = db.Users.FirstOrDefault(p => p.Email == email);
+                if (ContextUser != null)
+                {
+                    // Переход на страницу пользователя, который авторизовался
+                    App.MainWindow.Content = new Authorized();
+                }
+                else
+                {
+                    StatusBar.Text = "The user is not registered";
+                }
+            }
+        }
 
         Clear();
         Agree.IsChecked = false;
-        StatusBar.Text = "User saved";
+        
 
 
     }

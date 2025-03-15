@@ -80,29 +80,23 @@ public partial class Contacts : UserControl
          {
              using (var db = new PostgresContext())
              {
-                 // string sql = "SELECT COUNT FROM users WHERE email = '" + email + "'AND password = '" + password + "'";
-                 // NpgsqlCommand command = new NpgsqlCommand(sql);
-                 // var result = command.ExecuteScalar();
-                 // int i = Convert.ToInt32(result);
-                 // if(i == 0)
-                 
-                 // if (db.Users.Any(x => x.Email == email))
-                 
-                 if (ContextUser.Id == 0)
+                 ContextUser = db.Users.FirstOrDefault(u => u.Email == email);
+                 if (ContextUser == null)
                  {
                      User context = new User{Email = Email.Text, Password = Password.Text};
                      db.Users.Add(context);
-                     App.MainWindow.MyContent.Content = new Main();
+                     StatusBar.Text = "User saved";
+                     //App.MainWindow.MyContent.Content = new Main();
                  }
                  else
                  {
-                     db.Entry(ContextUser).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+                     //db.Entry(ContextUser).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
                      App.MainWindow.MyContent.Content = new Main();
                  }
                  db.SaveChanges();
              }
              Clear();
-             StatusBar.Text = "Saved";
+             
          }
     }
 }

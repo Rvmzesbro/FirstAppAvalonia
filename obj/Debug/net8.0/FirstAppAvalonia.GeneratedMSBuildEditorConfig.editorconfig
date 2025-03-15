@@ -30,6 +30,9 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 [/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
+[/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/AuthorizedWindowStyle.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
 [/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/ContactsWindowStyle.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
@@ -37,6 +40,9 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/MainWindowStyle.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/Page/Authorized.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/Page/Contacts.axaml]

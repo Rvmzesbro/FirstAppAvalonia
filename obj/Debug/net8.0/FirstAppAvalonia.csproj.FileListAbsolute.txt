@@ -149,3 +149,4 @@
 /home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/obj/Debug/net8.0/FirstApp.7085DABC.Up2Date
 /home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/obj/Debug/net8.0/FirstAppAvalonia.genruntimeconfig.cache
 /home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/obj/Debug/net8.0/ref/FirstAppAvalonia.dll
+/home/ramzik/RiderProjects/FirstAppAvalonia/FirstAppAvalonia/obj/Debug/net8.0/FirstAppAvalonia.sourcelink.json
