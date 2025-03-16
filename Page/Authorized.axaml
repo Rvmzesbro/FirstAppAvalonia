@@ -13,27 +13,27 @@
     
     
     <Grid Classes="MainGrid">
-        <!-- <StackPanel Grid.Row="0"> -->
-        <!--     <TextBlock Text="Authorized user"></TextBlock> -->
-        <!-- </StackPanel> -->
-        <!-- <StackPanel Grid.Row="1"> -->
-        <!--      -->
-        <!-- </StackPanel> -->
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Authorized user"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
         
-        <ListBox ItemsSource="{Binding Users}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid RowDefinitions="Auto, *">
-                        <StackPanel Grid.Row="0">
-                            <TextBlock Text="Email"></TextBlock>
-                        </StackPanel>
-                        <StackPanel Grid.Row="1">
-                            <TextBlock Text="{Binding Email}"></TextBlock>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        </StackPanel>
+        
+        <!-- <ListBox ItemsSource="{Binding Users}"> -->
+        <!--     <ListBox.ItemTemplate> -->
+        <!--         <DataTemplate> -->
+        <!--             <Grid RowDefinitions="Auto, *"> -->
+        <!--                 <StackPanel Grid.Row="0"> -->
+        <!--                     <TextBlock Text="Email"></TextBlock> -->
+        <!--                 </StackPanel> -->
+        <!--                 <StackPanel Grid.Row="1"> -->
+        <!--                     <TextBlock Text="{Binding Email}"></TextBlock> -->
+        <!--                 </StackPanel> -->
+        <!--             </Grid> -->
+        <!--         </DataTemplate> -->
+        <!--     </ListBox.ItemTemplate> -->
+        <!-- </ListBox> -->
         
     </Grid>
 </UserControl>
